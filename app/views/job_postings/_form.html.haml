@@ -1,0 +1,32 @@
+= form_for @job_posting do |f|
+  - if @job_posting.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@job_posting.errors.count, "error")} prohibited this job_posting from being saved:"
+      %ul
+        - @job_posting.errors.full_messages.each do |msg|
+          %li= msg
+  .row
+    .col-lg-5
+      .form-group
+        = f.label :position, class: "control-label"
+        = f.text_field :position, autofocus: true, type: "text", class: "form-control", placeholder: "Analyst"
+      .form-group
+        = f.label :company, type: "text", class: "control-label"
+        = f.text_field :company, autofocus: true, type: "text", class: "form-control", placeholder: "Alpha Delta Corp."
+      .form-group
+        = f.label :application_instructions, class: "control-label"
+        = f.text_field :application_instructions, autofocus: true, type: "text", class: "form-control", placeholder: "email resume/cover letter to Jake Vic at jake@ad.com"
+      .form-group
+        = f.label :expiration_date, type: "date", class: "control-label"
+        = f.date_select :expiration_date
+      .form-group
+        = f.label :job_description, class: "control-label"
+        = f.text_area :job_description, autofocus: true, type: "text", class: "form-control", :rows => "5", placeholder: "see: ad.com/jobs/analyst"
+      / .form-group
+      /   = f.label :job_category, class: "control-label"
+      /   = f.number_field :job_category
+      .form-group
+        = f.label :location, class: "control-label"
+        = f.text_field :location, autofocus: true, type: "text", class: "form-control", placeholder: "San Francisco and New York City"
+      .actions
+        = f.submit 'Save', class: "btn btn-primary"

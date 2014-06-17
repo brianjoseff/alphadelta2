@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: MyString
+  application_instructions: MyString
+  expiration_date: 2014-06-15
+  job_description: MyText
+  job_category: 1
+  location: MyString
+
+two:
+  position: MyString
+  application_instructions: MyString
+  expiration_date: 2014-06-15
+  job_description: MyText
+  job_category: 1
+  location: MyString

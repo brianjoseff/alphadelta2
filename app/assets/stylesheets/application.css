@@ -1,0 +1,49 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+body{
+/*  font-family: Verdana, Helvetica, Arial;*/
+
+  font-size: 14px;
+  background: url(house.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+}
+
+
+
+.content {
+/*	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;*/
+	/* Fallback for web browsers that doesn't support RGBa */
+		/*background: rgb(0, 0, 0);*/
+		/* RGBa with 0.6 opacity */
+		background: rgba(0, 0, 0, 0.8);
+		/* For IE 5.5 - 7*/
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+		/* For IE 8*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+/*  width: 75%;
+  margin: 0 auto;*/
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  /*margin-top: 20px;*/
+  min-height: 500px;
+padding-top: 100px;
+}

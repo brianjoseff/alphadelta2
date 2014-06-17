@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Position:
+  = @job_posting.position
+%p
+  %b Application instructions:
+  = @job_posting.application_instructions
+%p
+  %b Expiration date:
+  = @job_posting.expiration_date
+%p
+  %b Job description:
+  = @job_posting.job_description
+%p
+  %b Job category:
+  = @job_posting.job_category
+%p
+  %b Location:
+  = @job_posting.location
+
+= link_to 'Edit', edit_job_posting_path(@job_posting)
+\|
+= link_to 'Back', job_postings_path

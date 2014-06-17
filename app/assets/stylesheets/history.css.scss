@@ -1,0 +1,24 @@
+// Place all the styles related to the History controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+ul.history-sidenav{
+	list-style-type: none;
+	
+}
+
+.history-sidenav li {
+	margin-top: 10px;
+}
+
+.history-sidenav a {
+  color: #000;
+	font-size: 1.5em;
+  &:hover {
+    color: #bd3838;
+    background-color: transparent;
+		text-decoration:none;
+		
+  }
+}
