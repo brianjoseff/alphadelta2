@@ -34,7 +34,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-
+gem 'devise'
 gem 'pg'
 gem 'heroku'
 
