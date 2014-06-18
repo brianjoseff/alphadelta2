@@ -1,6 +1,27 @@
+@media (min-width: 768px) {
+  .bs-sidebar.affix {
+    width: 158px;
+    top: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bs-sidebar.affix {
+    width: 213px;
+    position: fixed;
+    top: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bs-sidebar.affix {
+    width: 263px;
+  }
+}
+
 
 .ribbon {
-	 margin-left: -18px;
+	 margin-left: -19px;
 /*   width: 976px;*/
    position: absolute;
    text-align: center;

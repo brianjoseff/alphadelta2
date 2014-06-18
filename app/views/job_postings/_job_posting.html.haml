@@ -1,11 +1,12 @@
 
-  =link_to job_posting.position, job_posting_path(job_posting)
-%div.row-fluid
-  =truncate(job_posting.job_description, 25)
-%div.row-fluid
-  =job_posting.expiration_date
-  =job_posting.location
-%div.row-fluid
-  =job_posting.job_category
-/ -feed_item.tags.each do |tag|
-/   =link_to tag.name, tag_url(tag), :class => "tag"
+.row
+  .col-lg-8.job-posting
+    =link_to job_posting.position, job_posting_path(job_posting), class: "job-pos"
+    %span.job-co -- #{job_posting.company}
+    %p.job-loc #{job_posting.location}
+    %p #{truncate(job_posting.job_description, 25)}
+
+    %p Expiration date: #{job_posting.expiration_date.strftime("%B %d, %Y")}
+
+
+

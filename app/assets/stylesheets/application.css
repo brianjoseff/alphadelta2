@@ -24,7 +24,16 @@ body{
 		background-size: cover;
 }
 
+.make-btn{
+	color: white !important;
+}
 
+.sidenav1{
+	border-right: 1px solid #898989;
+}
+.sidenav2{
+	border-left: 1px solid #898989;
+}
 
 .content {
 /*	zoom: 1;
@@ -33,17 +42,23 @@ body{
 	/* Fallback for web browsers that doesn't support RGBa */
 		/*background: rgb(0, 0, 0);*/
 		/* RGBa with 0.6 opacity */
-		background: rgba(0, 0, 0, 0.8);
+		background: rgba(255, 255, 255, 0.8);
 		/* For IE 5.5 - 7*/
 		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
 		/* For IE 8*/
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 /*  width: 75%;
   margin: 0 auto;*/
-  background-color: #FFF;
+/*  background-color: #FFF;*/
   padding: 20px 40px;
   border: solid 1px black;
   /*margin-top: 20px;*/
   min-height: 500px;
-padding-top: 100px;
+padding-top: 150px;
+}
+
+.donate{
+	border: 2px solid #696969;
+	background: rgba(255, 255, 255, 0.6);
+	
 }

@@ -6,15 +6,22 @@
     %p For centuries the Adelphian, as the schooner was called, enjoyed smooth sailing and free cable, until one day a bit of ocean floor algae that had evolved into a college dean pulled the plug, so to speak. The ocean drained into the Connecticut, and the Adelphian plummeted to its current site, only the quarterdeck remaining above ground. Alpha Delta may not look much like a boat anymore, but it's still been known to rock every so often.
     
   .col-lg-1
-  .col-lg-4
-    %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "_top"}
-      %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}
-        %input{:name => "hosted_button_id", :type => "hidden", :value => "P9LLKVW82Q62Q"}
-          %input{:alt => "PayPal - The safer, easier way to pay online!", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif", :type => "image"}
-            %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/en_US/i/scr/pixel.gif", :width => "1"}
-    =link_to "See the house in its full glory", "#", id: "see_house", class: "btn btn-custom hide-content"
+  .col-lg-4.sidenav2
+    .text-center.donate
+      %h4 Give back to your fraternity:
+      %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "_top"}
+        %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}
+          %input{:name => "hosted_button_id", :type => "hidden", :value => "P9LLKVW82Q62Q"}
+            %input{:alt => "PayPal - The safer, easier way to pay online!", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif", :type => "image"}
+              %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/en_US/i/scr/pixel.gif", :width => "1"}
+    
+    / =link_to "See the house in its full glory", "#", id: "see_house", class: "btn btn-custom hide-content"
     
     %h3 News Feed
     = render @news_items
-    -if current_user
+    -if current_user && current_user.admin?
       =link_to "Add News Item", new_news_item_path
+.row
+  %footer
+    .admin
+      =link_to "Admin sign in", new_user_session_path

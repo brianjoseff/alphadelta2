@@ -1,3 +1,4 @@
 %h1 Job Postings
+= link_to 'Create a Job Posting', new_job_posting_path, class: "btn btn-primary make-btn"
 
-= link_to 'New Job posting', new_job_posting_path, class: "btn btn-primary"
+=render @job_postings
