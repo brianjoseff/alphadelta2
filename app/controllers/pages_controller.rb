@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @news_items = NewsItem.all
+    @news_items = NewsItem.last(5)
   end
 
   def history

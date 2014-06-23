@@ -1,0 +1,7 @@
+.row
+  .col-lg-12
+    .news-item
+      %p.bold= link_to news_item.title, news_item
+      %p=truncate(news_item.content, 25)
+      %p=news_item.created_at.strftime("%B %d, %Y")
+      / %p=l news_item.created_at.time, format: :short

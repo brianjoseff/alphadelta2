@@ -1,23 +1,24 @@
-@media (min-width: 768px) {
-  .bs-sidebar.affix {
-    width: 158px;
-    top: 25px;
+@media (min-width: 800px) {
+  #large_screen_nav {
+
+  }
+  #small_screen_nav {
+		display: none;
   }
 }
 
-@media (min-width: 992px) {
-  .bs-sidebar.affix {
-    width: 213px;
-    position: fixed;
-    top: 25px;
+@media (max-width: 800px) {
+  #large_screen_nav {
+		display: none;
   }
+	#small_screen_nav {
+		
+  }
+	.nav{
+		
+	}
 }
 
-@media (min-width: 1200px) {
-  .bs-sidebar.affix {
-    width: 263px;
-  }
-}
 
 
 .ribbon {

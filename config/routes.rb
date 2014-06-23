@@ -1,4 +1,6 @@
 Alphadelta2::Application.routes.draw do
+  resources :alumni_news_items
+
   get "history/governing_documents"
   get "history/six_principles"
   get "history/vision_statement"
@@ -13,7 +15,7 @@ Alphadelta2::Application.routes.draw do
   devise_for :users
   match '/photos', to: "pages#photos", via: :get
   # match '/history', to: "pages#history", via: :get
-  match '/alumni_news', to: "pages#alumni_news", via: :get
+ # match '/alumni_news', to: "pages#alumni_news", via: :get
   
   
   root to: "pages#index"

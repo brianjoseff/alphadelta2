@@ -24,6 +24,10 @@ body{
 		background-size: cover;
 }
 
+.bold{
+	font-weight: bold;
+}
+
 .make-btn{
 	color: white !important;
 }

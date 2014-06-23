@@ -1,0 +1,17 @@
+= form_for @alumni_news_item do |f|
+  - if @alumni_news_item.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@alumni_news_item.errors.count, "error")} prohibited this alumni_news_item from being saved:"
+      %ul
+        - @alumni_news_item.errors.full_messages.each do |msg|
+          %li= msg
+  .row
+    .col-lg-6
+      .form-group
+        = f.label :title, class: "control-label"
+        = f.text_field :title, autofocus: true, type: "text", class: "form-control", placeholder: "Title of Alumni News Item goes here"
+      .field
+        = f.label :content
+        = f.text_area :content, autofocus: true, type: "text", class: "form-control", placeholder: "Alumnus X is a champion because of Y", :rows => "10"
+      .actions
+        = f.submit 'Save', class: "btn btn-primary"

@@ -1,0 +1,5 @@
+%h1 Alumni News
+-if current_user && current_user.admin?
+  =link_to "Add Some Alumni News", new_alumni_news_item_path, class: "btn btn-primary make-btn"
+
+=render @alumni_news_items

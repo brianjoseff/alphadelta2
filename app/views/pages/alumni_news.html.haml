@@ -1,2 +1,4 @@
-%h1 Pages#alumni_news
-%p Find me in app/views/pages/alumni_news.html.haml
+%h1 Alumni News
+
+-if current_user && current_user.admin?
+  =link_to "Add Some Alumni News", new_alumni_news_path, class: "btn btn-primary make-btn"

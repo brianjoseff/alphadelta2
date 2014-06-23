@@ -5,23 +5,9 @@
   %param{:name => "allowFullScreen", :value => "true"}
   %embed{:allowFullScreen => "true", :flashvars => "offsite=true&lang=en-us&page_show_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2Fshow%2F&page_show_back_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2F&set_id=72157644791513879&jump_to=", :height => "300", :src => "https://www.flickr.com/apps/slideshow/show.swf?v=143270", :type => "application/x-shockwave-flash", :width => "400"}
 
-%table
-  %tr
-    %th Title
-    %th
-    %th
-    %th
 
-  - @albums.each do |album|
-    %tr
-      %td= album.title
-      %td= link_to 'Show', album
-      %td= link_to 'Edit', edit_album_path(album)
-      %td= link_to 'Destroy', album, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Album', new_album_path
+%br/
+= link_to 'Create New Album', 'https://www.flickr.com/photos/organize/?start_tab=new_set', class: 'btn btn-primary make-btn'
 
 
-%h1 Composites
+%h1 Composites:
