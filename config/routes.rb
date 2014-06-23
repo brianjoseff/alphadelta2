@@ -1,6 +1,7 @@
 Alphadelta2::Application.routes.draw do
+  get "download/pdf"
   resources :alumni_news_items
-
+  get "download/pdf"
   get "history/governing_documents"
   get "history/six_principles"
   get "history/vision_statement"

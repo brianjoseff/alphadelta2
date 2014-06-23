@@ -24,4 +24,7 @@
 .row
   %footer
     .admin
-      =link_to "Admin sign in", new_user_session_path
+      -unless current_user && current_user.admin? && user_signed_in?
+        =link_to "Admin sign in", new_user_session_path
+      -if current_user && current_user.admin? && user_signed_in?
+        =link_to "Sign out", destroy_user_session_path, :method => :delete
