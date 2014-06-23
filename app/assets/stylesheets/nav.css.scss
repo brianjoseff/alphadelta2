@@ -1,4 +1,4 @@
-@media (min-width: 800px) {
+/*@media (min-width: 800px) {
   #large_screen_nav {
 
   }
@@ -18,8 +18,66 @@
 		
 	}
 }
+*/
+#nav_background{
+		background: none;
+		text-decoration: none !important;
+		background-color: #4c58d4 !important;
+		background: -webkit-gradient(linear, left top, left bottom, from(#4c58d4), to(#243391));
+  background: -webkit-linear-gradient(top, #4c58d4, #243391);
+  background: -moz-linear-gradient(top, #4c58d4, #243391);
+  background: -ms-linear-gradient(top, #4c58d4, #243391);
+  background: -o-linear-gradient(top, #4c58d4, #243391);
+  background-image: -ms-linear-gradient(top, #4c58d4 0%, #243391 100%);
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+	margin-left: -20px;
+	margin-right: -20px;
+}
 
+.ribbon-container{
+	position:relative;
+}
+.ribbon-left-corner{ 
+		position: absolute;
+		width: 20px;
+		height: 30px;
+		z-index: 9999;
+		left:0px;
+		top:0px;
+    background: url(left-ribbon.png) no-repeat;
+}
+.ribbon-right-corner{ 
+		position: absolute;
+		width: 20px;
+		height: 30px;
+		z-index: 9999;
+		right:0px;
+		top:0px;
+    background: url(right-ribbon.png) no-repeat;
+}
 
+#nav{
+	
+/*	background: right bottom url(right-ribbon.png) no-repeat;*/
+}
+
+.navbar-toggle{
+	border: 2px solid #fff;
+}
+.icon-bar{
+	border: 2px solid #fff !important;
+}
+.dropdown-menu{
+	background-color: #000 !important;
+}
+.dropdown-menu a:hover{
+	background-color: #bd3838  !important;
+}
+.navbar{
+	margin-bottom: 0px !important;
+}
 
 .ribbon {
 	 margin-left: -19px;
@@ -93,7 +151,8 @@
    margin-top:2px;
 /*   border-top: 1px dashed rgba(0, 0, 0, 0.2);     dark blue*/
 /*	border-top: 1px dashed rgba(167, 4, 4, 1);      dark red */
-	border-top: 1px dashed rgba(241, 206, 15, 1);        /*gold*/
+	border-top: 1px dashed rgba(241, 206, 15, 1);
+	border-bottom: 1px dashed rgba(241, 206, 15, 1);        /*gold*/
 
 
    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
@@ -101,13 +160,16 @@
    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
    }
 .ribbon-stitches-bottom {
+	/*box-shadow: 0 0 0 5px #4c58d4;*/
+	
    margin-bottom:2px;
-/*   border-top: 1px dashed rgba(0, 0, 0, 0.2);*/
+   border-top: 1px dashed rgba(0, 0, 0, 1);
 /*	border-top: 1px dashed rgba(167, 4, 4, 1);*/
-		border-top: 1px dashed rgba(241, 206, 15, 1);        /*gold*/
-   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
-   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+		border-bottom: 1px dashed rgba(241, 206, 15, 1) !important; 
+		border-top: 1px dashed rgba(241, 206, 15, 1) !important;         /*gold*/
+   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3) !important;
+   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3) !important;
+   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3) !important;
    }
 
 #header_logo{
@@ -118,9 +180,10 @@
 }
 
 .nav{
-	margin-right: 20px;
+/*	margin-right: 20px;
 	
-	padding-left: 400px !important;
+	padding-left: 400px !important;*/
+	
 }
 .navbar-nav{
 	float: none !important;
@@ -129,7 +192,7 @@
 
 .nav> .active > a{
 		color: #bd3838 !important;
-		background: none;
+/*		background: none;
 		text-decoration: none !important;
 		background-color: #4c58d4 !important;
 		background: -webkit-gradient(linear, left top, left bottom, from(#4c58d4), to(#243391));
@@ -140,9 +203,14 @@
    background-image: -ms-linear-gradient(top, #4c58d4 0%, #243391 100%);
    -webkit-box-shadow: none !important;
    -moz-box-shadow: none !important;
-   box-shadow: none !important;
+   box-shadow: none !important;*/
 	
 }
+
+.navbar a{
+	color: #f9f087 !important;
+}
+
 .navbar > .active > a:hover{
 		color: #f9f087;
 }
@@ -168,7 +236,7 @@ a#header_logo:hover{
 
 .navbar .nav> .active > a{
 		color: #bd3838 !important;
-		background: none;
+/*		background: none;
 		text-decoration: none !important;
 		background-color: #4c58d4 !important;
 		background: -webkit-gradient(linear, left top, left bottom, from(#4c58d4), to(#243391));
@@ -179,7 +247,7 @@ a#header_logo:hover{
    background-image: -ms-linear-gradient(top, #4c58d4 0%, #243391 100%);
    -webkit-box-shadow: none !important;
    -moz-box-shadow: none !important;
-   box-shadow: none !important;
+   box-shadow: none !important;*/
 
 }
 .navbar > .active > a:hover{
