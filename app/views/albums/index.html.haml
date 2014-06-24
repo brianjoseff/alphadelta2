@@ -1,3 +1,48 @@
+%h1 Composites:
+
+=link_to image_tag("09.jpg", class: "composite"), "#","data-target" => "#modal_image_09", "data-toggle" => "modal"
+#modal_image_09.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .pull-right
+    = link_to 'X', "#", :rel => "modal:close", class: "close bold"
+  =image_tag "09.jpg"
+
+=link_to image_tag("10.jpg", class: "composite"), "#","data-target" => "#modal_image_10", "data-toggle" => "modal"
+#modal_image_10.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .pull-right
+    = link_to 'X', "#", :rel => "modal:close", class: "close bold"
+  =image_tag "10.jpg"
+
+=link_to image_tag("11.jpg", class: "composite"), "#","data-target" => "#modal_image_11", "data-toggle" => "modal"
+#modal_image_11.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .pull-right
+    = link_to 'X', "#", :rel => "modal:close", class: "close bold"
+  =image_tag "11.jpg"
+
+=link_to image_tag("12.jpg", class: "composite"), "#","data-target" => "#modal_image_12", "data-toggle" => "modal"
+#modal_image_12.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .pull-right
+    = link_to 'X', "#", :rel => "modal:close", class: "close bold"
+  =image_tag "12.jpg"
+
+=link_to image_tag("13.jpg", class: "composite"), "#","data-target" => "#modal_image_13", "data-toggle" => "modal"
+#modal_image_13.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .pull-right
+    = link_to 'X', "#", :rel => "modal:close", class: "close bold"
+  =image_tag "13.jpg"
+
+
+/ =link_to image_tag(@dress.assets.empty?  ? '/assets/small.png': @dress.assets.first.image.url(:medium), :alt => @dress.title),"#" ,"data-target" => "#modal_image", "data-toggle" => "modal", :type => "button", :class => "thumbnail"
+/ %div#modal_image{:style => "display:none;", class: "text-center"}
+/   =image_tag(@dress.assets.empty?  ? '/assets/small.png': @dress.assets.first.image.url(:normal), :alt => @dress.title)
+
+
+/ =image_tag "09.jpg", class: "composite"
+/ =image_tag "10.jpg"
+/ =image_tag "11.jpg"
+/ =image_tag "12.jpg"
+/ =image_tag "13.jpg"
+
+
 %h1 Photos:
 %object{:height => "300", :width => "400"}
   %param{:name => "flashvars", :value => "offsite=true&lang=en-us&page_show_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2Fshow%2F&page_show_back_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2F&set_id=72157644791513879&jump_to="}
@@ -10,4 +55,3 @@
 = link_to 'Create New Album', 'https://www.flickr.com/photos/organize/?start_tab=new_set', class: 'btn btn-primary make-btn'
 
 
-%h1 Composites:
