@@ -1,0 +1,14 @@
+= form_for @adelphian do |f|
+  - if @adelphian.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@adelphian.errors.count, "error")} prohibited this adelphian from being saved:"
+      %ul
+        - @adelphian.errors.full_messages.each do |msg|
+          %li= msg
+  .row
+    .col-lg-5
+      .form-group
+        =f.file_field :pdf
+        
+      .actions
+        = f.submit 'Upload an Issue of the Adelphian', class: "btn btn-primary"

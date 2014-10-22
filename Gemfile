@@ -38,6 +38,10 @@ gem 'devise'
 gem 'pg'
 gem 'heroku'
 
+gem 'aws-sdk'
+gem 'paperclip'
+gem 'figaro'
+
 gem "haml-rails"
 
 

@@ -69,6 +69,6 @@ class AlumniNewsItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alumni_news_item_params
-      params.require(:alumni_news_items).permit(:title, :content)
+      params.require(:alumni_news_item).permit(:title, :content)
     end
 end

@@ -8,13 +8,13 @@ Alphadelta2::Application.routes.draw do
   match '/history', to: "history#index", via: :get
 
   resources :albums
-
   resources :job_postings
-
+  resources :adelphians
   resources :news_items
 
   devise_for :users
   match '/photos', to: "pages#photos", via: :get
+  match "/undergraduate_news", to: 'pages#undergraduate_news', via: :get
   # match '/history', to: "pages#history", via: :get
  # match '/alumni_news', to: "pages#alumni_news", via: :get
   
