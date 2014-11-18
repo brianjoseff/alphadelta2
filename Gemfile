@@ -38,6 +38,7 @@ gem 'devise'
 gem 'pg'
 gem 'heroku'
 
+gem 'aws-s3'
 gem 'aws-sdk'
 gem 'paperclip'
 gem 'figaro'

@@ -1,2 +1,22 @@
 -if current_user && current_user.admin?
-  =link_to "Upload Adelphian", new_adelphian_path
+  .admin-border
+    %p Hello Admin:
+    / =link_to "Upload Adelphian", new_adelphian_path
+    =link_to "Add Some Undergrad News", new_news_item_path(set_category: 1), class: "btn btn-primary make-btn"
+    %br/
+    .adelphian
+      %p Upload adelphian
+      = form_for @adelphian do |f|
+        - if @adelphian.errors.any?
+          #error_explanation
+            %h2= "#{pluralize(@adelphian.errors.count, "error")} prohibited this adelphian from being saved:"
+            %ul
+              - @adelphian.errors.full_messages.each do |msg|
+                %li= msg
+        .row
+          .col-lg-5
+            .form-group
+              =f.file_field :pdf
+
+            .actions
+              = f.submit 'Upload an Issue of the Adelphian', class: "btn btn-primary"

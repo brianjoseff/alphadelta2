@@ -4,6 +4,8 @@ class AlbumsController < ApplicationController
   # GET /albums
   # GET /albums.json
   def index
+    @photo = Photo.new
+    @photos = Photo.all
     @albums = Album.all
   end
 

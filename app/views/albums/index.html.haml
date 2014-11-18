@@ -1,3 +1,28 @@
+.admin-border
+  %p Hello Admin:
+
+  .adelphian
+    %p Upload a photo
+    = form_for @photo do |f|
+      - if @photo.errors.any?
+        #error_explanation
+          %h2= "#{pluralize(@photo.errors.count, "error")} prohibited this adelphian from being saved:"
+          %ul
+            - @photo.errors.full_messages.each do |msg|
+              %li= msg
+      .row
+        .col-lg-5
+          .form-group
+            =f.file_field :image
+          .form-group
+            =f.text_field :caption, placeholder: "Photo caption"
+          .actions
+            = f.submit 'Upload this Photo', class: "btn btn-primary"
+
+%h1 Photos:
+.row
+  =render partial: 'photos/photo', collection: @photos
+
 %h1 Composites:
 
 =link_to image_tag("09.jpg", class: "composite"), "#","data-target" => "#modal_image_09", "data-toggle" => "modal"
@@ -43,15 +68,17 @@
 / =image_tag "13.jpg"
 
 
-%h1 Photos:
-%object{:height => "300", :width => "400"}
-  %param{:name => "flashvars", :value => "offsite=true&lang=en-us&page_show_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2Fshow%2F&page_show_back_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2F&set_id=72157644791513879&jump_to="}
-  %param{:name => "movie", :value => "https://www.flickr.com/apps/slideshow/show.swf?v=143270"}
-  %param{:name => "allowFullScreen", :value => "true"}
-  %embed{:allowFullScreen => "true", :flashvars => "offsite=true&lang=en-us&page_show_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2Fshow%2F&page_show_back_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2F&set_id=72157644791513879&jump_to=", :height => "300", :src => "https://www.flickr.com/apps/slideshow/show.swf?v=143270", :type => "application/x-shockwave-flash", :width => "400"}
+/FLICKR ALBUMS
 
-
-%br/
-= link_to 'Create New Album', 'https://www.flickr.com/photos/organize/?start_tab=new_set', class: 'btn btn-primary make-btn'
+/ %h1 Photos:
+/ %object{:height => "300", :width => "400"}
+/   %param{:name => "flashvars", :value => "offsite=true&lang=en-us&page_show_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2Fshow%2F&page_show_back_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2F&set_id=72157644791513879&jump_to="}
+/   %param{:name => "movie", :value => "https://www.flickr.com/apps/slideshow/show.swf?v=143270"}
+/   %param{:name => "allowFullScreen", :value => "true"}
+/   %embed{:allowFullScreen => "true", :flashvars => "offsite=true&lang=en-us&page_show_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2Fshow%2F&page_show_back_url=%2Fphotos%2F125437180%40N02%2Fsets%2F72157644791513879%2F&set_id=72157644791513879&jump_to=", :height => "300", :src => "https://www.flickr.com/apps/slideshow/show.swf?v=143270", :type => "application/x-shockwave-flash", :width => "400"}
+/ 
+/ 
+/ %br/
+/ = link_to 'Create New Album', 'https://www.flickr.com/photos/organize/?start_tab=new_set', class: 'btn btn-primary make-btn'
 
 

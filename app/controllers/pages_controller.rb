@@ -12,6 +12,7 @@ class PagesController < ApplicationController
   def alumni_news
   end
   def undergraduate_news
+    @adelphian = Adelphian.new
   end
   
   def undergraduate_news_pdf

@@ -7,9 +7,22 @@
           %li= msg
   .row
     .col-lg-6
+      -if @category
+        .form-group
+          =hidden_field_tag :news_item_category_id, @category.to_i
+          -if @category == 0
+            %p General News Item
+          -elsif @category == 1
+            %p Undergrad News Item
+          -else
+            %p Alumni News Item
+      -else
+        .form-group
+          = f.collection_select(:news_item_category_id, NewsItemCategory.all, :id, :name, {:prompt => 'Category '},:class => "form-control")
       .form-group
         = f.label :title, class: "control-label"
         = f.text_field :title, type: "text", class: "form-control", placeholder: "Dean Wormer places Alpha Delta on Double-Secret Probation!"
+
       .form-group
         = f.label :content, class: "control-label"
         = f.text_area :content, type: "text", class: "form-control", placeholder: "In a shameful ploy to curry favorable press, college administrators have...", rows: "5"

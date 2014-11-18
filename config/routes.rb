@@ -1,4 +1,6 @@
 Alphadelta2::Application.routes.draw do
+  resources :photos
+
   get "download/pdf"
   resources :alumni_news_items
   get "download/pdf"

@@ -15,6 +15,10 @@ class NewsItemsController < ApplicationController
   # GET /news_items/new
   def new
     @news_item = NewsItem.new
+    @categories = NewsItemCategory.all
+    if params[:set_category]
+      @category = params[:set_category]
+    end
   end
 
   # GET /news_items/1/edit

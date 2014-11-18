@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140828184157) do
+ActiveRecord::Schema.define(version: 20141117234409) do
 
   create_table "adelphians", force: true do |t|
     t.datetime "created_at"
@@ -47,11 +47,28 @@ ActiveRecord::Schema.define(version: 20140828184157) do
     t.string   "company"
   end
 
+  create_table "news_item_categories", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "news_items", force: true do |t|
     t.text     "content"
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "news_item_category_id"
+  end
+
+  create_table "photos", force: true do |t|
+    t.string   "caption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", force: true do |t|

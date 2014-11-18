@@ -20,7 +20,7 @@
     %h3 News Feed
     = render @news_items
     -if current_user && current_user.admin?
-      =link_to "Add News Item", new_news_item_path
+      =link_to "Add News Item", new_news_item_path(set_category: 0)
 .row
   %footer
     .admin

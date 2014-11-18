@@ -1,4 +1,5 @@
 %h1 Alumni News
 
 -if current_user && current_user.admin?
-  =link_to "Add Some Alumni News", new_alumni_news_path, class: "btn btn-primary make-btn"
+  / =link_to "Add Some Alumni News", new_alumni_news_path, class: "btn btn-primary make-btn"
+  =link_to "Add Some Alumni News", new_news_item_path(set_category: 2), class: "btn btn-primary make-btn"
