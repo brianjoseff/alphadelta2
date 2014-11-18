@@ -5,9 +5,9 @@ namespace :db do
     NewsItemCategory.delete_all
     NewsItemCategory.reset_pk_sequence
     
-    NewsItemCategory.create!(:name => "General", id: 0)
-    NewsItemCategory.create!(:name => "Undergrad", id: 1)
-    NewsItemCategory.create!(:name => "Alumni", id: 2)
+    NewsItemCategory.create!(:title => "General", id: 0)
+    NewsItemCategory.create!(:title => "Undergrad", id: 1)
+    NewsItemCategory.create!(:title => "Alumni", id: 2)
 
     
   end

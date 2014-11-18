@@ -4,7 +4,9 @@ class AlumniNewsItemsController < ApplicationController
   # GET /alumni_news_items
   # GET /alumni_news_items.json
   def index
-    @alumni_news_items = AlumniNewsItem.all
+    @undergrad_cat = NewsItemCategory.find(2)
+    @alumni_news_items = @undergrad_cat.news_items
+    # @alumni_news_items = AlumniNewsItem.all
   end
 
   # GET /alumni_news_items/1

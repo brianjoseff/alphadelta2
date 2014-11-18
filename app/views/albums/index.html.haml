@@ -11,11 +11,11 @@
             - @photo.errors.full_messages.each do |msg|
               %li= msg
       .row
-        .col-lg-5
+        .col-lg-12
           .form-group
             =f.file_field :image
           .form-group
-            =f.text_field :caption, placeholder: "Photo caption"
+            =f.text_field :caption, placeholder: "Photo caption", type: "text", class: "form-control"
           .actions
             = f.submit 'Upload this Photo', class: "btn btn-primary"
 

@@ -13,6 +13,8 @@ class PagesController < ApplicationController
   end
   def undergraduate_news
     @adelphian = Adelphian.new
+    @undergrad_cat = NewsItemCategory.find(1)
+    @news_items = @undergrad_cat.news_items
   end
   
   def undergraduate_news_pdf

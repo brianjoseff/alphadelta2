@@ -9,13 +9,10 @@
     .col-lg-6
       -if @category
         .form-group
+          
           =hidden_field_tag :news_item_category_id, @category.to_i
-          -if @category == 0
-            %p General News Item
-          -elsif @category == 1
-            %p Undergrad News Item
-          -else
-            %p Alumni News Item
+          =label_tag "News Category"
+          = f.collection_select(:news_item_category_id, NewsItemCategory.all, :id, :title, {:prompt => 'Category ', selected: @category.to_i},:class => "form-control col-lg-5")
       -else
         .form-group
           = f.collection_select(:news_item_category_id, NewsItemCategory.all, :id, :name, {:prompt => 'Category '},:class => "form-control")

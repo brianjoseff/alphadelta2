@@ -5,4 +5,5 @@
   =link_to "Add Some Alumni News", new_news_item_path(set_category: 2), class: "btn btn-primary make-btn"
 
 
-=render @alumni_news_items
+ 
+=render partial: 'news_items/news_item', collection: @alumni_news_items
